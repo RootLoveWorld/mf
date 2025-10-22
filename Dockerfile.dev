@@ -1,0 +1,21 @@
+# 开发环境 Dockerfile
+FROM node:18-alpine
+
+# 安装 pnpm
+RUN npm install -g pnpm
+
+WORKDIR /app
+
+# 复制 package.json 文件
+COPY package.json pnpm-workspace.yaml ./
+COPY packages/*/package.json ./packages/
+COPY shared/package.json ./shared/
+
+# 安装依赖
+RUN pnpm install
+
+# 暴露端口
+EXPOSE 3001 3002 3003
+
+# 默认命令
+CMD ["pnpm", "dev"]

@@ -1,0 +1,29 @@
+{
+  "name": "mf_app2",
+  "version": "1.0.0",
+  "description": "Consumer App",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rsbuild dev --open",
+    "build": "rsbuild build",
+    "preview": "rsbuild preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "mf_shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "24.7.2",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "@rsbuild/core": "1.5.17",
+    "@rsbuild/plugin-react": "1.4.1",
+    "@rsbuild/plugin-typescript": "1.4.1",
+    "@module-federation/rsbuild-plugin": "0.20.0"
+  },
+  "keywords": ["micro-frontend", "consumer"],
+  "author": "",
+  "license": "ISC"
+}
