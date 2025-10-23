@@ -8,7 +8,7 @@ export default defineConfig({
     pluginModuleFederation({
       name: 'mf_app2',
       remotes: {
-        mf_app1: 'mf_app1@http://localhost:3001/remoteEntry.js',
+        mf_app1: 'mf_app1@http://localhost:3001/mf-manifest.json',
       },
       shared: {
         react: { 
@@ -26,6 +26,11 @@ export default defineConfig({
   ],
   server: {
     port: 3002,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization',
+    },
   },
   dev: {
     assetPrefix: 'http://localhost:3002',

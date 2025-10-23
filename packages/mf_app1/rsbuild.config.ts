@@ -12,12 +12,12 @@ export default defineConfig({
         './ProductList': './src/components/ProductList',
       },
       shared: {
-        react: { 
+        react: {
           singleton: true,
           requiredVersion: '^19.2.0',
           eager: true
         },
-        'react-dom': { 
+        'react-dom': {
           singleton: true,
           requiredVersion: '^19.2.0',
           eager: true
@@ -27,6 +27,11 @@ export default defineConfig({
   ],
   server: {
     port: 3001,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization',
+    },
   },
   dev: {
     assetPrefix: 'http://localhost:3001',
