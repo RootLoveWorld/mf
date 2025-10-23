@@ -12,7 +12,7 @@ const App: React.FC = () => {
       <Suspense fallback={<div>加载 Header 中...</div>}>
         <RemoteHeader />
       </Suspense>
-      
+
       <main className="main-content">
         <Card title="消费者应用 (mf_app2)">
           <p>这是消费者应用，使用来自 mf_app1 的远程组件</p>
