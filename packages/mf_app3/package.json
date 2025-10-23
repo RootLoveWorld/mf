@@ -20,8 +20,7 @@
     "react-dom": "19.2.0",
     "@rsbuild/core": "1.5.17",
     "@rsbuild/plugin-react": "1.4.1",
-    "@rsbuild/plugin-typescript": "1.4.1",
-    "@module-federation/rsbuild-plugin": "0.20.0"
+    "@module-federation/rsbuild-plugin": "0.21.1"
   },
   "keywords": ["micro-frontend", "hybrid", "provider", "consumer"],
   "author": "",
