@@ -5,8 +5,16 @@ import { UserProfile } from './components/UserProfile';
 import './App.css';
 
 // 导入远程组件
-const RemoteHeader = React.lazy(() => import('mf_app1/Header'));
-const RemoteProductList = React.lazy(() => import('mf_app1/ProductList'));
+const RemoteHeader = React.lazy(() => 
+  import('mf_app1/Header').then(module => ({ 
+    default: module.default || module.Header || module 
+  }))
+);
+const RemoteProductList = React.lazy(() => 
+  import('mf_app1/ProductList').then(module => ({ 
+    default: module.default || module.ProductList || module 
+  }))
+);
 
 const App: React.FC = () => {
   return (

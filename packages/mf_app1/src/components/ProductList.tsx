@@ -43,3 +43,5 @@ export const ProductList: React.FC = () => {
     </div>
   );
 };
+
+export default ProductList;
